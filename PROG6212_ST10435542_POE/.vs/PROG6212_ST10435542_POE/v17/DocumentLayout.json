@@ -1,0 +1,647 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C7AFFF64-BA3D-4DEB-93EB-E3E2DBFACD11}|Part 2 Tests\\Part 2 Tests.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\part 2 tests\\claimtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7AFFF64-BA3D-4DEB-93EB-E3E2DBFACD11}|Part 2 Tests\\Part 2 Tests.csproj|solutionrelative:part 2 tests\\claimtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7AFFF64-BA3D-4DEB-93EB-E3E2DBFACD11}|Part 2 Tests\\Part 2 Tests.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\part 2 tests\\filestoragservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7AFFF64-BA3D-4DEB-93EB-E3E2DBFACD11}|Part 2 Tests\\Part 2 Tests.csproj|solutionrelative:part 2 tests\\filestoragservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\controllers\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\controllers\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\viewmodels\\lecturer\\submitclaimviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\viewmodels\\lecturer\\submitclaimviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\uploads\\claims.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\uploads\\claims.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\controllers\\academicmanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\controllers\\academicmanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\services\\filestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\services\\filestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\programmecoordinator\\pendingclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\programmecoordinator\\pendingclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\viewmodels\\approval\\pendingclaimviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\viewmodels\\approval\\pendingclaimviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\controllers\\programmecoordinatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\controllers\\programmecoordinatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\supportingdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\supportingdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\services\\ifilestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\services\\ifilestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\viewmodels\\lecturer\\lecturerprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\viewmodels\\lecturer\\lecturerprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\academicmanager\\processedclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\academicmanager\\processedclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\academicmanager\\pendingclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\academicmanager\\pendingclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\academicmanager\\reviewclaim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\academicmanager\\reviewclaim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\academicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\academicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\enums\\claimstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\enums\\claimstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\enums\\claimapprovalstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\enums\\claimapprovalstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\enums\\approverroleenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\enums\\approverroleenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\programmecoordinator\\processedclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\programmecoordinator\\processedclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\programmecoordinator\\reviewclaim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\programmecoordinator\\reviewclaim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\viewmodels\\approval\\processedclaimviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\viewmodels\\approval\\processedclaimviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\viewmodels\\approval\\claimdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\viewmodels\\approval\\claimdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\claimapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\claimapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\claimdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\claimdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\programmecoordinator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\programmecoordinator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\lecturer\\lecturerprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\lecturer\\lecturerprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\lecturer\\claimdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\lecturer\\claimdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\lecturer\\claimstatustracker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\lecturer\\claimstatustracker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\views\\lecturer\\submitclaim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\views\\lecturer\\submitclaim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\models\\viewmodels\\lecturer\\claimstatusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\models\\viewmodels\\lecturer\\claimstatusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|c:\\users\\user\\onedrive - advtech ltd\\desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\prog6212_st10435542_poe\\prog6212_st10435542_poe\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA0AD854-6DC5-49AE-87A1-EB4D71F2B037}|PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE.csproj|solutionrelative:prog6212_st10435542_poe\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 40,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Program.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Program.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T18:15:48.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T21:19:23.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:26:25.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T21:22:08.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LecturerController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Controllers\\LecturerController.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Controllers\\LecturerController.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Controllers\\LecturerController.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Controllers\\LecturerController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T11:58:47.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Lecturer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\Lecturer.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\Lecturer.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\Lecturer.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\Lecturer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T09:30:11.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SubmitClaimViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\SubmitClaimViewModel.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\SubmitClaimViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\SubmitClaimViewModel.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\SubmitClaimViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T20:26:07.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ClaimStatusViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\ClaimStatusViewModel.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\ClaimStatusViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\ClaimStatusViewModel.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\ClaimStatusViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T20:28:56.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LecturerProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\LecturerProfileViewModel.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\LecturerProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\LecturerProfileViewModel.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Lecturer\\LecturerProfileViewModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAYwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T20:29:27.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FileController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Controllers\\FileController.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Controllers\\FileController.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Controllers\\FileController.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Controllers\\FileController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T10:18:03.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FileStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Services\\FileStorageService.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Services\\FileStorageService.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Services\\FileStorageService.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Services\\FileStorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T20:16:40.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IFileStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Services\\IFileStorageService.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Services\\IFileStorageService.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Services\\IFileStorageService.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Services\\IFileStorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAACiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T20:16:56.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SupportingDocument.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\SupportingDocument.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\SupportingDocument.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\SupportingDocument.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\SupportingDocument.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T09:30:55.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ClaimDetail.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ClaimDetail.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\ClaimDetail.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ClaimDetail.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\ClaimDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T09:30:38.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ClaimApproval.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ClaimApproval.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\ClaimApproval.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ClaimApproval.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\ClaimApproval.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T09:31:44.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "SubmitClaim.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Lecturer\\SubmitClaim.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\Lecturer\\SubmitClaim.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Lecturer\\SubmitClaim.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\Lecturer\\SubmitClaim.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T12:34:47.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ClaimStatusTracker.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Lecturer\\ClaimStatusTracker.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\Lecturer\\ClaimStatusTracker.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Lecturer\\ClaimStatusTracker.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\Lecturer\\ClaimStatusTracker.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswCcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T12:35:19.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ClaimDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Lecturer\\ClaimDetails.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\Lecturer\\ClaimDetails.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Lecturer\\ClaimDetails.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\Lecturer\\ClaimDetails.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAWwIMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T12:35:34.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "LecturerProfile.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Lecturer\\LecturerProfile.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\Lecturer\\LecturerProfile.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\Lecturer\\LecturerProfile.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\Lecturer\\LecturerProfile.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAEMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T13:01:39.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ApproverRoleEnum.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\Enums\\ApproverRoleEnum.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\Enums\\ApproverRoleEnum.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\Enums\\ApproverRoleEnum.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\Enums\\ApproverRoleEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T10:54:59.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ClaimApprovalStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\Enums\\ClaimApprovalStatusEnum.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\Enums\\ClaimApprovalStatusEnum.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\Enums\\ClaimApprovalStatusEnum.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\Enums\\ClaimApprovalStatusEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T10:55:19.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ClaimStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\Enums\\ClaimStatusEnum.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\Enums\\ClaimStatusEnum.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\Enums\\ClaimStatusEnum.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\Enums\\ClaimStatusEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T10:54:24.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProgrammeCoordinatorController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Controllers\\ProgrammeCoordinatorController.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Controllers\\ProgrammeCoordinatorController.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Controllers\\ProgrammeCoordinatorController.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Controllers\\ProgrammeCoordinatorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:40:50.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProgrammeCoordinator.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ProgrammeCoordinator.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\ProgrammeCoordinator.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ProgrammeCoordinator.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\ProgrammeCoordinator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T09:31:19.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PendingClaimViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\PendingClaimViewModel.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\PendingClaimViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\PendingClaimViewModel.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\PendingClaimViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T20:35:24.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ProcessedClaimViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\ProcessedClaimViewModel.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\ProcessedClaimViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\ProcessedClaimViewModel.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\ProcessedClaimViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T20:35:54.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ClaimDetailsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\ClaimDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\ClaimDetailsViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\ClaimDetailsViewModel.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\ViewModels\\Approval\\ClaimDetailsViewModel.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAwGAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T20:36:28.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PendingClaims.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\PendingClaims.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\PendingClaims.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\PendingClaims.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\PendingClaims.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADMAAACYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T12:37:43.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ReviewClaim.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\ReviewClaim.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\ReviewClaim.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\ReviewClaim.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\ReviewClaim.cshtml",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAgwHQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T12:38:18.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ProcessedClaims.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\ProcessedClaims.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\ProcessedClaims.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\ProcessedClaims.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\ProgrammeCoordinator\\ProcessedClaims.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T12:38:36.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AcademicManagerController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Controllers\\AcademicManagerController.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Controllers\\AcademicManagerController.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Controllers\\AcademicManagerController.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Controllers\\AcademicManagerController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAOYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:40:33.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AcademicManager.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\AcademicManager.cs",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Models\\AcademicManager.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Models\\AcademicManager.cs",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Models\\AcademicManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T09:31:32.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ReviewClaim.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\AcademicManager\\ReviewClaim.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\AcademicManager\\ReviewClaim.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\AcademicManager\\ReviewClaim.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\AcademicManager\\ReviewClaim.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T12:39:54.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PendingClaims.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\AcademicManager\\PendingClaims.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\AcademicManager\\PendingClaims.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\AcademicManager\\PendingClaims.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\AcademicManager\\PendingClaims.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T12:39:36.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProcessedClaims.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\AcademicManager\\ProcessedClaims.cshtml",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\Views\\AcademicManager\\ProcessedClaims.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\Views\\AcademicManager\\ProcessedClaims.cshtml",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\Views\\AcademicManager\\ProcessedClaims.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCoAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-14T12:40:11.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileStoragServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\Part 2 Tests\\FileStoragServiceTests.cs",
+              "RelativeDocumentMoniker": "Part 2 Tests\\FileStoragServiceTests.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\Part 2 Tests\\FileStoragServiceTests.cs",
+              "RelativeToolTip": "Part 2 Tests\\FileStoragServiceTests.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T18:00:22.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClaimTests.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\Part 2 Tests\\ClaimTests.cs",
+              "RelativeDocumentMoniker": "Part 2 Tests\\ClaimTests.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\Part 2 Tests\\ClaimTests.cs",
+              "RelativeToolTip": "Part 2 Tests\\ClaimTests.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T18:00:28.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "claims.json",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\uploads\\claims.json",
+              "RelativeDocumentMoniker": "PROG6212_ST10435542_POE\\uploads\\claims.json",
+              "ToolTip": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\PROG6212_ST10435542_POE\\uploads\\claims.json",
+              "RelativeToolTip": "PROG6212_ST10435542_POE\\uploads\\claims.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-29T11:24:48.392Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

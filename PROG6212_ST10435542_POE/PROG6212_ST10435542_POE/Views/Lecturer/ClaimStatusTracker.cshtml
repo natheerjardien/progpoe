@@ -1,0 +1,62 @@
+﻿@using PROG6212_ST10435542_POE.Models.Enums
+@using PROG6212_ST10435542_POE.Models.ViewModels.Lecturer
+
+@model List<ClaimStatusViewModel>
+@{
+    ViewData["Title"] = "My Claim Status";
+}
+
+@* I made use of Empty Razor View and incorporated code from previous MVC projects and made minor tweaks to my liking *@
+@* These views mainly made use of the ViewModels ive created in order to manipulate which data i wanted in specific views, instead of the mai models according to the database schema *@
+
+<h1>Lecturer</h1>
+<p></p>
+<h4>My Claim Status</h4>
+<p>Track the current status of your submitted claims transparently.</p>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Claim ID</th>
+            <th>Claim Period</th>
+            <th>Submission Date</th>
+            <th>Total Amount</th>
+            <th>Current Status</th>
+            <th>Last Update</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var claim in Model)
+            {
+                <tr>
+                    <td>@claim.ClaimID</td>
+                    <td>@claim.ClaimPeriod.ToString("MMMM yyyy")</td>
+                    <td>@claim.SubmissionDate.ToString("dd/MM/yyyy")</td>
+                    <td>@($"R {claim.TotalAmount:N2}")</td>
+                    <td>
+                        <span class="badge @(claim.Status == ClaimStatusEnum.ApprovedByManager ? "bg-success" :
+                                                    claim.Status == ClaimStatusEnum.Rejected ? "bg-danger" :
+                                                    claim.Status == ClaimStatusEnum.PendingCoordinatorApproval ? "bg-warning" :
+                                                    claim.Status == ClaimStatusEnum.PendingManagerApproval ? "bg-info" : "bg-secondary")">
+                        @claim.Status
+                        </span>
+                    </td>
+                    <td>@claim.LastUpdate?.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <a asp-controller="Lecturer" asp-action="ClaimDetails" asp-route-id="@claim.ClaimID" class="btn btn-outline-primary">Claim Details</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7" class="text-center"> No claims submitted yet. </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />

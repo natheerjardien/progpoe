@@ -1,0 +1,133 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PROG6212_ST10435542_POE
+build_property.RootNamespace = PROG6212_ST10435542_POE
+build_property.ProjectDir = C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\PROG6212_ST10435542_POE\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\PROG6212_ST10435542_POE
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/AcademicManager/PendingClaims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNNYW5hZ2VyXFBlbmRpbmdDbGFpbXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/AcademicManager/ProcessedClaims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNNYW5hZ2VyXFByb2Nlc3NlZENsYWltcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/AcademicManager/ReviewClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNNYW5hZ2VyXFJldmlld0NsYWltLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Admin/AddLecturerFinancials.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTGVjdHVyZXJGaW5hbmNpYWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Admin/DisplayReports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzcGxheVJlcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Admin/EditLecturerFinancials.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdExlY3R1cmVyRmluYW5jaWFscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Admin/GenerateInvoiceReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2VuZXJhdGVJbnZvaWNlUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Admin/ManageUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Lecturer/ClaimDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcQ2xhaW1EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Lecturer/ClaimStatusTracker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcQ2xhaW1TdGF0dXNUcmFja2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Lecturer/LecturerProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcTGVjdHVyZXJQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Lecturer/SubmitClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcU3VibWl0Q2xhaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/ProgrammeCoordinator/ApprovalWorkflowSettings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbW1lQ29vcmRpbmF0b3JcQXBwcm92YWxXb3JrZmxvd1NldHRpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/ProgrammeCoordinator/PendingClaims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbW1lQ29vcmRpbmF0b3JcUGVuZGluZ0NsYWltcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/ProgrammeCoordinator/ProcessedClaims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbW1lQ29vcmRpbmF0b3JcUHJvY2Vzc2VkQ2xhaW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/ProgrammeCoordinator/ReviewClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbW1lQ29vcmRpbmF0b3JcUmV2aWV3Q2xhaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-52ujr9mopp

@@ -1,0 +1,146 @@
+﻿@using PROG6212_ST10435542_POE.Models.Enums
+@using PROG6212_ST10435542_POE.Models.ViewModels.Approval
+
+@model ClaimDetailsViewModel
+@{
+    ViewData["Title"] = "Review Claim (Programme Coordinator)";
+}
+
+@* I made use of Empty Razor View and incorporated code from previous MVC projects and made minor tweaks to my liking *@
+@* These views mainly made use of the ViewModels ive created in order to manipulate which data i wanted in specific views, instead of the mai models according to the database schema *@
+
+<h1>Programme Manager</h1>
+<p></p>
+<h4>Review Claim</h4>
+<div class="row">
+    <div class="col-md-8">
+        <dl class="row">
+            <dt class="col-sm-4">Lecturer Name:</dt>
+            <dd class="col-sm-8">@Model.LecturerName</dd>
+
+            <dt class="col-sm-4">Submission Date:</dt>
+            <dd class="col-sm-8">@Model.SubmissionDate.ToString("dd/MM/yyyy")</dd>
+
+            <dt class="col-sm-4">Claim Period:</dt>
+            <dd class="col-sm-8">@Model.ClaimPeriod.ToString("MMMM yyyy")5</dd>
+
+            <dt class="col-sm-4">Total Hours Worked:</dt>
+            <dd class="col-sm-8">@Model.TotalHoursWorked</dd>
+
+            <dt class="col-sm-4">Total Amount Claimed:</dt>
+            <dd class="col-sm-8">R @Model.TotalAmount.ToString("N2")</dd>
+
+            <dt class="col-sm-4">Current Status:</dt>
+            <dd class="col-sm-8">
+                <span class="badge @(Model.Status == ClaimStatusEnum.ApprovedByManager ? "bg-success" :
+                                                        Model.Status == ClaimStatusEnum.Rejected ? "bg-danger" :
+                                                        Model.Status == ClaimStatusEnum.PendingManagerApproval ? "bg-warning" : "bg-info")">
+                    @Model.Status
+                </span>
+            </dd>
+        </dl>
+        <p></p>
+        @if (Model.ClaimDetails != null && Model.ClaimDetails.Any())
+        {
+            <h4 class="mt-4">Claim Details:</h4>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Date Worked</th>
+                    <th>Hours</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                    @foreach (var detail in Model.ClaimDetails)
+                    {
+                        <tr>
+                            <td>@detail.DateWorked.ToString("dd/MM/yyyy")</td>
+                            <td>@detail.HoursWorked</td>
+                            <td>@detail.TaskDescription</td>
+                        </tr>
+                    }
+            </tbody>
+        </table>
+        }
+
+        <hr />
+
+        <h4 class="mt-4">Supporting Documents</h4>
+        @if (Model.Documents != null && Model.Documents.Any())
+        {
+            <ul>
+                @foreach (var doc in Model.Documents)
+                {
+                    <li>
+                        <a href="@doc.FileUrl" target="_blank" class="btn btn-outline-primary btn-sm">@doc.FileName</a>
+                        <span class="text-muted">(@doc.DisplaySize)</span>
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p class="text-muted">No supporting documents uploaded.</p>
+        }
+        
+        <hr />
+
+        <h4 class="mt-4">Approval History</h4>
+        @if (Model.ApprovalHistory != null && Model.ApprovalHistory.Any())
+        {
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Approver</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                        <th>Date</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var history in Model.ApprovalHistory.OrderBy(h => h.ApprovalDate))
+                    {
+                        <tr>
+                            <td>@history.ApproverName</td>
+                            <td>@history.ApproverRole</td>
+                            <td>
+                                <span class="badge @(history.ApprovalStatus == ClaimApprovalStatusEnum.Approved ? "bg-success" : 
+                                                  history.ApprovalStatus == ClaimApprovalStatusEnum.Rejected ? "bg-danger" : "bg-warning")">
+                                    @history.ApprovalStatus
+                                </span>
+                            </td>
+                            <td>@history.ApprovalDate.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@history.Comments</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p class="text-muted">No approval history available.</p>
+        }
+
+        <hr />
+
+        <h4 class="mt-4">Verification & Action</h4>
+        <form asp-controller="ProgrammeCoordinator" asp-action="ReviewClaim">
+            <div class="form-group">
+                <label for="CoordinatorComments">Your Comments (optional):</label>
+                <textarea id="CoordinatorComments" name="CoordinatorComments" class="form-control" rows="3"></textarea>
+            </div>
+            <p></p>
+            @* <button type="submit" class="btn btn-success">Approve Claim</button>
+            <button type="submit" class="btn btn-danger">Reject Claim</button> *@
+            <a asp-controller="ProgrammeCoordinator" asp-action="PendingClaims" class="btn btn-outline-primary">Back to Pending Claims</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

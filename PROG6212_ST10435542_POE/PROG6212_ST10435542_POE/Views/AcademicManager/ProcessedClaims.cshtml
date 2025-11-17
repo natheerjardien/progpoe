@@ -1,0 +1,63 @@
+﻿@using PROG6212_ST10435542_POE.Models.Enums
+@using PROG6212_ST10435542_POE.Models.ViewModels.Approval
+
+@model List<ProcessedClaimViewModel>
+@{
+    ViewData["Title"] = "Processed Claims History (Academic Manager)";
+}
+
+@* I made use of Empty Razor View and incorporated code from previous MVC projects and made minor tweaks to my liking *@
+@* These views mainly made use of the ViewModels ive created in order to manipulate which data i wanted in specific views, instead of the mai models according to the database schema *@
+
+<h1>Academic Manager</h1>
+<p></p>
+<h4>Processed Claims History</h4>
+<p>This page shows all claims that have been processed by academic managers.</p>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Claim ID</th>
+                <th>Lecturer</th>
+                <th>Submission Date</th>
+                <th>Claim Period</th>
+                <th>Processed Date</th>
+                <th>Total Amount</th>
+                <th>Final Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model)
+            {
+                <tr>
+                    <td>@claim.ClaimID</td>
+                    <td>@claim.LecturerName</td>
+                    <td>@claim.SubmissionDate.ToString("dd/MM/yyyy")</td>
+                    <td>@claim.ClaimPeriod.ToString("MMMM yyyy")</td>
+                    <td>@claim.ProcessedDate.ToString("dd/MM/yyyy")</td>
+                    <td>R @claim.TotalAmount.ToString("N2")</td>
+                    <td>
+                        <span class="badge @(claim.FinalStatus == ClaimStatusEnum.ApprovedByManager ? "bg-success" :
+                                                                        claim.FinalStatus == ClaimStatusEnum.Rejected ? "bg-danger" :
+                                                                        claim.FinalStatus == ClaimStatusEnum.PendingManagerApproval ? "bg-warning" : "bg-info")">
+                    @claim.FinalStatus
+                </span>
+            </td>
+            <td>
+                <a asp-controller="AcademicManager" asp-action="ReviewClaim" asp-route-id="@claim.ClaimID" class="btn btn-outline-info btn-sm">View Details</a>
+            </td>
+        </tr>
+                }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        <h5>No Processed Claims</h5>
+        <p>There are no processed claims to display at this time.</p>
+    </div>
+}

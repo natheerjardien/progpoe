@@ -1,0 +1,65 @@
+﻿@using PROG6212_ST10435542_POE.Models.ViewModels.Account
+
+@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+@* I made use of Empty Razor View and incorporated code from previous MVC projects and made minor tweaks to my liking *@
+@* These views mainly made use of the ViewModels ive created in order to manipulate which data i wanted in specific views, instead of the mai models according to the database schema *@
+
+<h1>Register</h1>
+
+<p>Create a new account. New accounts are automatically assigned the 'Lecturer' role.</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Account" asp-action="Register" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username"></label>
+                <input asp-for="Username" placeholder="njardien" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" type="email" placeholder="nj@gmail.com"  class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" placeholder="Natheer" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" placeholder="Jardien" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber">Phone Number (optional):</label>
+                <input asp-for="PhoneNumber" placeholder="0123456789" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" placeholder="password" type="password!" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" type="password" placeholder="password!" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <p></p>
+            <button type="submit" class="btn btn-primary">Register</button>
+            <p class="mt-3">Already have an account? <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary">Login</a></p>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

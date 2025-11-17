@@ -1,0 +1,16 @@
+2025-10-22T15:56:48.8954548+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.4.3+c252b64ad913ea9411fc5d17bfd5580d2d061497
+2025-10-22T15:56:48.9779729+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2025-10-22T15:56:48.9827829+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2025-10-22T15:56:48.9827995+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 15:56:48.775
+2025-10-22T15:56:48.9925316+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 18244
+2025-10-22T15:56:48.9943546+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.20
+2025-10-22T15:56:48.9944660+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.20\System.Private.CoreLib.dll
+2025-10-22T15:56:48.9945152+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2025-10-22T15:56:48.9945228+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\Part 2 Tests\bin\Debug\net8.0\Part 2 Tests.dll
+2025-10-22T15:56:48.9953076+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\Part 2 Tests\bin\Debug\net8.0\Log --results-directory C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\TestResults --client-port 60997'
+2025-10-22T15:56:49.0001423+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2025-10-22T15:56:49.0968323+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2025-10-22T15:56:49.1112334+00:00 Microsoft.Testing.Platform.Configurations.JsonConfigurationSource+JsonConfigurationProvider INFORMATION Config file 'C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\Part 2 Tests\bin\Debug\net8.0\Part 2 Tests.testconfig.json' not found.
+2025-10-22T15:56:49.1192712+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2025-10-22T15:56:49.4796215+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.6.4' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2025-10-22T15:56:49.5088588+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings attribute 'MaxCpuCount' is not supported by Microsoft.Testing.Platform and will be ignored

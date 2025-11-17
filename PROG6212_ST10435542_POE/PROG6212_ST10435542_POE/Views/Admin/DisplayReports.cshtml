@@ -1,0 +1,31 @@
+﻿@using PROG6212_ST10435542_POE.Models.ViewModels.HR
+
+@model ReportsDisplayViewModel
+@{
+    ViewData["Title"] = "Display Reports";
+}
+
+@* I made use of Empty Razor View and incorporated code from previous MVC projects and made minor tweaks to my liking *@
+@* These views mainly made use of the ViewModels ive created in order to manipulate which data i wanted in specific views, instead of the mai models according to the database schema *@
+
+<h1>HR</h1>
+<p></p>
+<h4>Display Reports</h4>
+<p>View various financial and claim-related reports.</p>
+
+<div class="row">
+    <div class="col-md-4">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        Reports
+                    </tr>
+                </thead>
+                <tbody>
+                    No reports available.
+                </tbody>
+                </table>
+            <button class="btn btn-info">Print Report</button>
+            <a asp-controller="Admin" asp-action="GenerateInvoiceReport" class="btn btn-primary">Go to Report Generation</a>
+    </div>
+</div>

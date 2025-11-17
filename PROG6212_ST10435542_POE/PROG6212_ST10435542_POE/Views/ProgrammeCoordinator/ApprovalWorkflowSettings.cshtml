@@ -1,0 +1,51 @@
+﻿@* @using PROG6212_ST10435542_POE.Models.ViewModels.Approval
+
+@model ApprovalWorkflowSettingsViewModel
+@{
+    ViewData["Title"] = "Approval Workflow Settings (Coordinator)";
+}
+
+@* I made use of Empty Razor View and incorporated code from previous MVC projects and made minor tweaks to my liking *@
+@* These views mainly made use of the ViewModels ive created in order to manipulate which data i wanted in specific views, instead of the mai models according to the database schema *@
+
+@* <h1>Programme Manager</h1>
+<p></p>
+<h4>Approval Workflow SettingS</h4>
+<p>Configure the automated system for claim verification and approval processes for Programme Coordinators.</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="ProgrammeCoordinator" asp-action="ApprovalWorkflowSettings" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <h3>Claim Amount Thresholds</h3>
+            <div class="form-group">
+                <label asp-for="MaxHoursPerClaim">Maximum Hours per Claim:</label>
+                <input asp-for="MaxHoursPerClaim" placeholder="50hrs"  class="form-control" />
+                <span asp-validation-for="MaxHoursPerClaim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxTotalAmountPerClaim">Maximum Total Amount per Claim:</label>
+                <input asp-for="MaxTotalAmountPerClaim" placeholder="R 1000.00" class="form-control" />
+                <span asp-validation-for="MaxTotalAmountPerClaim" class="text-danger"></span>
+            </div>
+            <p></p>
+            <h3>Document Requirements</h3>
+            <div class="form-group form-check">
+                <input type="checkbox" asp-for="RequireSupportingDocuments" class="form-check-input" />
+                <label asp-for="RequireSupportingDocuments" class="form-check-label">Require Supporting Documents for all Claims</label>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Save Settings</button>
+                <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+} *@
