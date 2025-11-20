@@ -1,0 +1,69 @@
+﻿@model PROG6212_ST10435542_POE.Models.ViewModels.HR.UserManagementViewModel
+@using PROG6212_ST10435542_POE.Models.Enums
+
+@{
+    ViewData["Title"] = "Edit User Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card shadow-lg p-4">
+    <h1 class="text-primary mb-4">Edit User Profile: @Model.FirstName @Model.LastName</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-8">
+            <form asp-action="EditUser" method="post">
+                <div asp-validation-summary="All" class="text-danger mb-3"></div>
+                <input type="hidden" asp-for="UserID" />
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="FirstName" class="control-label"></label>
+                            <input asp-for="FirstName" class="form-control" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="LastName" class="control-label"></label>
+                            <input asp-for="LastName" class="form-control" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="SelectedRole" class="control-label"></label>
+                    <select asp-for="SelectedRole" class="form-control"
+                            asp-items="new SelectList(Model.AvailableRoles)">
+                    </select>
+                    <span asp-validation-for="SelectedRole" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="HourlyRate" class="control-label"></label>
+                    <input asp-for="HourlyRate" class="form-control" />
+                    <span asp-validation-for="HourlyRate" class="text-danger"></span>
+                    <small class="form-text text-muted">Set to 0 for non-Lecturer roles (HR, Coordinator, Manager).</small>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Update User</button>
+                    <a asp-action="ManageUsers" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

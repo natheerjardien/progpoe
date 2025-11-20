@@ -6,19 +6,20 @@ namespace PROG6212_ST10435542_POE.Models.ViewModels.HR
 {
     public class GenerateReportViewModel
     {
-        [Display(Name = "Report Type")]
-        public ReportTypesEnum ReportType { get; set; } // using an enum for the predefined report types
+        [Required]
+        [Display(Name = "Report Month")]
+        [DataType(DataType.Date)]
+        public DateTime ReportMonth { get; set; }
+    }
 
-        [Display(Name = "Start Date")]
-        public DateTime StartDate { get; set; }
-
-        [Display(Name = "End Date")]
-        public DateTime EndDate { get; set; }
-
-        [Display(Name = "Filter by Lecturer (Optional)")]
-        public int? LecturerID { get; set; }
-
-        // ViewBag.Lecturers will hold SelectListItems for the dropdown
-        public SelectList? Lecturers { get; set; }
+    // Model for displaying the data in the report
+    public class InvoiceReportDetail
+    {
+        public int ClaimId { get; set; }
+        public string LecturerName { get; set; }
+        public string Email { get; set; }
+        public decimal HoursWorked { get; set; }
+        public decimal HourlyRate { get; set; }
+        public decimal TotalAmount { get; set; }
     }
 }

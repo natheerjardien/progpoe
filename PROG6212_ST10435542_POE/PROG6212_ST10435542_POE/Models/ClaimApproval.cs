@@ -1,10 +1,12 @@
 ﻿using PROG6212_ST10435542_POE.Models.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PROG6212_ST10435542_POE.Models
 {
     public class ClaimApproval
     {
+        [Key]
         public int ApprovalID { get; set; }
         public int ClaimID { get; set; }
 
@@ -15,7 +17,8 @@ namespace PROG6212_ST10435542_POE.Models
         public DateTime ApprovalDate { get; set; }
         public string? Comments { get; set; }
 
-        public MonthlyClaim MonthlyClaim { get; set; }
+        public virtual MonthlyClaim MonthlyClaim { get; set; }
+        [ForeignKey("ApproverUserID")]
         public User Approver { get; set; }
     }
 }

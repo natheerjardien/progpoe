@@ -1,0 +1,44 @@
+﻿@model PROG6212_ST10435542_POE.Models.ViewModels.HR.GenerateReportViewModel
+
+@{
+    ViewData["Title"] = "Generate Invoice Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card shadow-lg p-4">
+    <h1 class="text-primary mb-4">Generate Invoice Report</h1>
+    <p class="text-muted">Select the month for which you want to generate the payroll invoice report (only includes **Approved** claims).</p>
+    <hr />
+
+    @if (!string.IsNullOrEmpty(ViewBag.StatusMessage))
+    {
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            @ViewBag.StatusMessage
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="GenerateReport" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="ReportMonth" class="control-label"></label>
+                    <input asp-for="ReportMonth" type="month" class="form-control" />
+                    <span asp-validation-for="ReportMonth" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Generate & Download CSV</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

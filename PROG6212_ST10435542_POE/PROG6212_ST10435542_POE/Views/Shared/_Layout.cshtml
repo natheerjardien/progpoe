@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using PROG6212_ST10435542_POE.Models.Data
+@using PROG6212_ST10435542_POE.Models.Enums
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -23,60 +29,82 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lecturer</a> @* dropdwon menu for all the tools related to store management (customers, products, orders) *@
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link text-dark" asp-controller="Lecturer" asp-action="SubmitClaim">Submit Claim</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" asp-controller="Lecturer" asp-action="ClaimStatusTracker">My Claims</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" asp-controller="Lecturer" asp-action="LecturerProfile">Profile</a></li>
-                            </ul>
-                        </li>
+                        @* --- HR NAVIGATION (SUPER USER) --- *@
+                        @if (SignInManager.IsSignedIn(User) && User.IsInRole(UserRoleEnum.HR.ToString()))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="hrDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    HR Management
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="hrDropdown">
+                                    <li><a class="dropdown-item" asp-controller="HR" asp-action="ManageUsers">Manage Users</a></li>
+                                    <li><a class="dropdown-item" asp-controller="HR" asp-action="AddUser">Add New User</a></li>
+                                    <li><a class="dropdown-item" asp-controller="HR" asp-action="GenerateReport">Generate Reports</a></li>
+                                </ul>
+                            </li>
+                        }
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programme Coordinator</a> @* dropdwon menu for all the tools related to store management (customers, products, orders) *@
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link text-dark" asp-controller="ProgrammeCoordinator" asp-action="PendingClaims">PC Approvals</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" asp-controller="ProgrammeCoordinator" asp-action="ProcessedClaims">PC Processed</a></li>
-                                @* <li class="nav-item"><a class="nav-link text-dark" asp-controller="ProgrammeCoordinator" asp-action="ApprovalWorkflowSettings">PC Settings</a></li> *@
-                            </ul>
-                        </li>
+                        @* --- LECTURER NAVIGATION --- *@
+                        @if (SignInManager.IsSignedIn(User) && User.IsInRole(UserRoleEnum.Lecturer.ToString()))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Lecturer" asp-action="SubmitClaim">Submit Claim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Lecturer" asp-action="ClaimStatusTracker">Track Claims</a>
+                            </li>
+                        }
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Academic Manager</a> @* dropdwon menu for all the tools related to store management (customers, products, orders) *@
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link text-dark" asp-controller="AcademicManager" asp-action="PendingClaims">AM Approvals</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" asp-controller="AcademicManager" asp-action="ProcessedClaims">AM Processed</a></li>
-                                @* <li class="nav-item"><a class="nav-link text-dark" asp-controller="AcademicManager" asp-action="ApprovalWorkflowSettings">AM Settings</a></li> *@
-                            </ul>
-                        </li>
-                        
-                        @* Tok admin menu items out of dropdown and put them next to each other, according to lecturer feedback *@
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Admin" asp-action="ManageUsers">Manage Users</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Admin" asp-action="DisplayReports">Reports</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Admin" asp-action="GenerateInvoiceReport">Generate Report</a></li>
+                        @* --- PROGRAMME COORDINATOR NAVIGATION --- *@
+                        @if (SignInManager.IsSignedIn(User) && User.IsInRole(UserRoleEnum.ProgrammeCoordinator.ToString()))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="pcDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Coordinator Review
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="pcDropdown">
+                                    <li><a class="dropdown-item" asp-controller="ProgrammeCoordinator" asp-action="PendingClaims">Pending Claims</a></li>
+                                    <li><a class="dropdown-item" asp-controller="ProgrammeCoordinator" asp-action="ProcessedClaims">Processed Claims</a></li>
+                                </ul>
+                            </li>
+                        }
 
-                        @*<li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin</a> @* dropdwon menu for all the tools related to store management (customers, products, orders) *@
-                            @*<ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link text-dark" asp-controller="Admin" asp-action="ManageUsers">Manage Users</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" asp-controller="Admin" asp-action="DisplayReports">Reports</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" asp-controller="Admin" asp-action="GenerateInvoiceReport">Generate Report</a></li>
-                            </ul>
-                        </li>*@
+                        @* --- ACADEMIC MANAGER NAVIGATION --- *@
+                        @if (SignInManager.IsSignedIn(User) && User.IsInRole(UserRoleEnum.AcademicManager.ToString()))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="amDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Manager Review
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="amDropdown">
+                                    <li><a class="dropdown-item" asp-controller="AcademicManager" asp-action="PendingClaims">Pending Claims</a></li>
+                                    <li><a class="dropdown-item" asp-controller="AcademicManager" asp-action="ProcessedClaims">Processed Claims</a></li>
+                                </ul>
+                            </li>
+                        }
+                    </ul>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accounts</a> @* dropdwon menu for all the tools related to store management (customers, products, orders) *@
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <form asp-controller="Home" asp-action="Index">
-                                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-                            </form>
-                        </li>
+                    @* --- LOGIN/LOGOUT SECTION --- *@
+                    <ul class="navbar-nav">
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <span class="nav-link text-dark">
+                                    Hello, @(UserManager.GetUserAsync(User).Result?.FirstName ?? User.Identity.Name)! (@(UserManager.GetRolesAsync(UserManager.GetUserAsync(User).Result).Result.FirstOrDefault() ?? "No Role"))
+                                </span>
+                            </li>
+                            <li class="nav-item">
+                                <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
+                                    <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

@@ -19,11 +19,10 @@
                     <p></p>
                     <form asp-controller="Account" asp-action="Login" method="post">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-group">
-                            <label asp-for="Username"></label>
-                            @* Placed hints in the form with placeholders *@
-                            <input asp-for="Username" placeholder="_gmail.com"  class="form-control" />
-                            <span asp-validation-for="Username" class="text-danger"></span>
+                        <div class="form-group mb-3">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
                         <p></p>
                         <div class="form-group">
@@ -32,6 +31,12 @@
                             <input asp-for="Password" type="password" placeholder="password" class="form-control" />
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
+                        <div class="form-group form-check mb-4">
+                            <input class="form-check-input" asp-for="RememberMe" />
+                            <label class="form-check-label" asp-for="RememberMe">
+                                @Html.DisplayNameFor(m => m.RememberMe)
+                            </label>
+                        </div>
                         <p></p>
                         @* Custom styled buttons based on the bootstrap theme that was implemented into this website *@
                         @* Button styling using Lux theme from Bootswatch (2025) *@
@@ -39,9 +44,7 @@
                             <button type="submit" class="btn btn-primary w-100">Login</button>
                         </div>
                         <div class="form-group">
-                            <p>
-                                <a asp-controller="Account" asp-action="Register" class="btn btn-outline-primary">Register as a new user</a>
-                            </p>
+                            <p class="text-muted">Need a user profile? HR must create it for you.</p>
                         </div>
                     </form>
                 </<div>

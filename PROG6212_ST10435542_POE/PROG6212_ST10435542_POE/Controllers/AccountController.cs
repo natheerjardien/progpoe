@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using PROG6212_ST10435542_POE.Models.Data;
 using PROG6212_ST10435542_POE.Models.ViewModels.Account;
 
 namespace PROG6212_ST10435542_POE.Controllers
@@ -7,16 +9,96 @@ namespace PROG6212_ST10435542_POE.Controllers
 // Ive made the controllers to use the ViewModels, but no logic added to it. Just to make the View visisble in the browser. Used the same concepts adopted from CLDV6212 POE
     public class AccountController : Controller
     {
-        public IActionResult Login()
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ILogger<AccountController> _logger;
+
+        public AccountController(SignInManager<ApplicationUser> signInManager,
+                                 UserManager<ApplicationUser> userManager,
+                                 ILogger<AccountController> logger)
         {
-            return View(new LoginViewModel());
+            _signInManager = signInManager;
+            _userManager = userManager;
+            _logger = logger;
         }
 
+        [HttpGet]
+        public IActionResult Login(string returnUrl = null)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+
+            if (ModelState.IsValid)
+            {
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+
+                if (result.Succeeded)
+                {
+                    _logger.LogInformation("User logged in successfully.");
+                    // Get the logged-in user to determine their role and correct redirect
+                    var user = await _userManager.FindByEmailAsync(model.Email);
+                    var roles = await _userManager.GetRolesAsync(user);
+                    var primaryRole = roles.FirstOrDefault();
+
+                    // Custom redirection logic based on role
+                    if (primaryRole == "HR")
+                    {
+                        return LocalRedirect("/HR/ManageUsers");
+                    }
+                    else if (primaryRole == "Lecturer")
+                    {
+                        return LocalRedirect("/Lecturer/SubmitClaim");
+                    }
+                    // Fallback or use returnUrl
+                    return LocalRedirect(returnUrl ?? "/Home/Index");
+                }
+                if (result.IsLockedOut)
+                {
+                    _logger.LogWarning("User account locked out.");
+                    ModelState.AddModelError(string.Empty, "Account locked out. Please try again later.");
+                    return View(model);
+                }
+                if (result.RequiresTwoFactor)
+                {
+                    // Not implemented, but good to check
+                    ModelState.AddModelError(string.Empty, "Two-factor authentication required.");
+                    return View(model);
+                }
+
+                // Generic failure message to prevent enumeration attacks
+                ModelState.AddModelError(string.Empty, "Invalid login attempt: Invalid email or password.");
+                return View(model);
+            }
+
+            // If Model State is invalid (e.g. required fields missing)
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            _logger.LogInformation("User logged out.");
+            return RedirectToAction(nameof(HomeController.Index), "Home");
+        }
+
+        // --- REGISTER ACTION REMOVED AS PER CHECKLIST: HR creates users ---
+        [HttpGet]
         public IActionResult Register()
         {
-            return View(new RegisterViewModel());
+            // Checklist Item: There should be no register - HR creates the user profiles
+            return RedirectToAction(nameof(Login));
         }
 
+        [HttpGet]
         public IActionResult AccessDenied()
         {
             return View();

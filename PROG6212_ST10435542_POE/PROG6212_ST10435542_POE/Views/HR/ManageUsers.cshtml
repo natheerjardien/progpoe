@@ -1,0 +1,60 @@
+﻿@model List<PROG6212_ST10435542_POE.Models.ViewModels.HR.UserManagementViewModel>
+
+@{
+    ViewData["Title"] = "Manage System Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="text-primary">Manage System Users</h1>
+        <a asp-action="AddUser" class="btn btn-success">Add New User</a>
+    </div>
+
+    @if (!string.IsNullOrEmpty(ViewBag.StatusMessage))
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @ViewBag.StatusMessage
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="card shadow">
+        <div class="card-body">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Hourly Rate</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Any())
+                    {
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>@user.FirstName @user.LastName</td>
+                                <td>@user.Email</td>
+                                <td><span class="badge bg-secondary">@user.SelectedRole</span></td>
+                                <td>R @user.HourlyRate.ToString("N2")</td>
+                                <td>
+                                    <a asp-action="EditUser" asp-route-id="@user.UserID" class="btn btn-sm btn-info">Edit</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center text-muted">No users found. Please add the first HR user via seeding or manually if necessary.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

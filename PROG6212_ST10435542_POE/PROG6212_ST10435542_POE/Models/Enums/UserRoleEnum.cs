@@ -2,6 +2,6 @@
 {
     public enum UserRoleEnum
     {
-        Lecturer, ProgrammeCoordinator, AcademicManager
+        HR, Lecturer, ProgrammeCoordinator, AcademicManager // Added new "HR" role for Part 3
     }
 }
