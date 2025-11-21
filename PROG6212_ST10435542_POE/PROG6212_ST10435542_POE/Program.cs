@@ -4,6 +4,7 @@ using PROG6212_ST10435542_POE.Models;
 using PROG6212_ST10435542_POE.Models.Data;
 using PROG6212_ST10435542_POE.Models.Enums;
 using PROG6212_ST10435542_POE.Services;
+using QuestPDF.Infrastructure;
 
 namespace PROG6212_ST10435542_POE
 {
@@ -49,6 +50,8 @@ namespace PROG6212_ST10435542_POE
 
             builder.Services.AddScoped<IClaimService, ClaimService>();
             builder.Services.AddScoped<IFileStorageService, FileStorageService>();
+
+            QuestPDF.Settings.License = LicenseType.Community; // to print the invoice report as a pdf
 
             var app = builder.Build();
 

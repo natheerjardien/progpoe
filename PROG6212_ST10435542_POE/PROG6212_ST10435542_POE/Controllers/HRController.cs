@@ -5,6 +5,10 @@ using PROG6212_ST10435542_POE.Models.Data;
 using PROG6212_ST10435542_POE.Models.Enums;
 using PROG6212_ST10435542_POE.Models.ViewModels.HR;
 using PROG6212_ST10435542_POE.Services;
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
+using System.Globalization; // to show the currency as rands in the report
 
 namespace PROG6212_ST10435542_POE.Controllers
 {
@@ -127,6 +131,11 @@ namespace PROG6212_ST10435542_POE.Controllers
                 user.UserRole = Enum.Parse<UserRoleEnum>(model.SelectedRole);
                 user.HourlyRate = model.HourlyRate; // updates financial info
 
+                if (!string.IsNullOrWhiteSpace(model.Password)) // checks if the password field was filled
+                {
+                    await _claimService.ResetUserPasswordAsync(user.Id, model.Password);
+                }
+
                 var updatedUser = await _claimService.UpdateUserAsync(user);
 
                 if (updatedUser != null)
@@ -154,39 +163,85 @@ namespace PROG6212_ST10435542_POE.Controllers
             {
                 var claims = await _claimService.GenerateInvoiceReportDataAsync(model.ReportMonth);
 
-                var reportData = claims.Select(c => new InvoiceReportDetail
-                {
-                    LecturerName = $"{c.Lecturer.FirstName} {c.Lecturer.LastName}",
-                    Email = c.Lecturer.Email,
-                    HoursWorked = c.TotalHoursWorked,
-                    HourlyRate = c.Lecturer.HourlyRate,
-                    TotalAmount = c.TotalAmount,
-                    ClaimId = c.ClaimID
-                }).ToList();
-
-                if (!reportData.Any())
+                if (!claims.Any())
                 {
                     ModelState.AddModelError(string.Empty, "No approved claims found for the selected month.");
                     return View(model);
                 }
 
-                var csv = new System.Text.StringBuilder();
-                csv.AppendLine("Claim ID,Lecturer Name,Email,Hours Worked,Hourly Rate,Total Amount");
-                foreach (var item in reportData)
+                // this section of code generates the pdf using QuestPDF
+                var document = Document.Create(container =>
                 {
-                    csv.AppendLine($"{item.ClaimId},{item.LecturerName},{item.Email},{item.HoursWorked},{item.HourlyRate:C},{item.TotalAmount:C}");
-                }
+                    container.Page(page =>
+                    {
+                        page.Size(PageSizes.A4);
+                        page.Margin(2, Unit.Centimetre);
+                        page.PageColor(Colors.White);
+                        page.DefaultTextStyle(x => x.FontSize(12));
 
-                var fileName = $"InvoiceReport_{model.ReportMonth:yyyyMM}.csv";
-                var contentType = "text/csv";
+                        page.Header()
+                            .Text($"Approved Claims Report - {model.ReportMonth:MMMM yyyy}")
+                            .SemiBold().FontSize(20).FontColor(Colors.Blue.Medium);
 
-                HttpContext.Session.SetString("StatusMessage", $"Generated invoice report for {model.ReportMonth:MMM yyyy} with {reportData.Count} entries.");
+                        page.Content()
+                            .PaddingVertical(1, Unit.Centimetre)
+                            .Table(table =>
+                            {
+                                table.ColumnsDefinition(columns =>
+                                {
+                                    columns.RelativeColumn();
+                                    columns.RelativeColumn();
+                                    columns.RelativeColumn();
+                                    columns.RelativeColumn();
+                                    columns.RelativeColumn();
+                                });
 
-                return File(System.Text.Encoding.UTF8.GetBytes(csv.ToString()), contentType, fileName);
+                                table.Header(header =>
+                                {
+                                    header.Cell().Element(CellStyle).Text("Lecturer");
+                                    header.Cell().Element(CellStyle).Text("Email");
+                                    header.Cell().Element(CellStyle).Text("Hours");
+                                    header.Cell().Element(CellStyle).Text("Rate");
+                                    header.Cell().Element(CellStyle).Text("Total");
+
+                                    static IContainer CellStyle(IContainer container)
+                                    {
+                                        return container.DefaultTextStyle(x => x.SemiBold()).PaddingVertical(5).BorderBottom(1).BorderColor(Colors.Black);
+                                    }
+                                });
+
+                                var zarCurrency = CultureInfo.GetCultureInfo("en-ZA");
+
+                                foreach (var item in claims)
+                                {
+                                    table.Cell().Element(CellStyle).Text($"{item.Lecturer.FirstName} {item.Lecturer.LastName}");
+                                    table.Cell().Element(CellStyle).Text(item.Lecturer.Email);
+                                    table.Cell().Element(CellStyle).Text(item.TotalHoursWorked.ToString("F2"));
+                                    table.Cell().Element(CellStyle).Text(item.Lecturer.HourlyRate.ToString("C", zarCurrency));
+                                    table.Cell().Element(CellStyle).Text(item.TotalAmount.ToString("C", zarCurrency));
+
+                                    static IContainer CellStyle(IContainer container)
+                                    {
+                                        return container.BorderBottom(1).BorderColor(Colors.Grey.Lighten2).PaddingVertical(5);
+                                    }
+                                }
+                            });
+
+                        page.Footer()
+                            .AlignCenter()
+                            .Text(x =>
+                            {
+                                x.Span("Page ");
+                                x.CurrentPageNumber();
+                            });
+                    });
+                });
+
+                var pdfBytes = document.GeneratePdf();
+                var fileName = $"InvoiceReport_{model.ReportMonth:yyyyMM}.pdf";
+                return File(pdfBytes, "application/pdf", fileName);
             }
 
-            ViewBag.StatusMessage = HttpContext.Session.GetString("StatusMessage");
-            HttpContext.Session.Remove("StatusMessage");
             return View(model);
         }
     }

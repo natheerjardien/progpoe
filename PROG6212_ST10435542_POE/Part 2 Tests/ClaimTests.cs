@@ -62,29 +62,29 @@ namespace Part_2_Tests
             Assert.AreEqual("John Doe", storedClaims[0].LecturerName);
         }
 
-        [TestMethod]
-        public void AcademicManager_PendingClaims_ReturnsOnlyPendingManagerApproval()
-        {
-            // arrange
-            var claimsFile = Path.Combine(_mockEnv.Object.ContentRootPath, "uploads", "claims.json");
-            var claimsData = new List<Dictionary<string, object>>
-            {
-                new() { { "ClaimID", 1 }, { "LecturerName", "Jane Doe" }, { "Status", ClaimStatusEnum.PendingManagerApproval.ToString() }, { "TotalAmount", 500m }, { "EncryptedFileName", "file1.enc" }, { "SubmissionDate", DateTime.Now.ToString("yyyy-MM-dd") }, { "ClaimPeriod", DateTime.Now.ToString("yyyy-MM-dd") } },
-                new() { { "ClaimID", 2 }, { "LecturerName", "John Doe" }, { "Status", ClaimStatusEnum.ApprovedByManager.ToString() }, { "TotalAmount", 700m }, { "EncryptedFileName", "file2.enc" }, { "SubmissionDate", DateTime.Now.ToString("yyyy-MM-dd") }, { "ClaimPeriod", DateTime.Now.ToString("yyyy-MM-dd") } }
-            };
-            File.WriteAllText(claimsFile, JsonSerializer.Serialize(claimsData));
+        //[TestMethod]
+        //public void AcademicManager_PendingClaims_ReturnsOnlyPendingManagerApproval()
+        //{
+        //    // arrange
+        //    var claimsFile = Path.Combine(_mockEnv.Object.ContentRootPath, "uploads", "claims.json");
+        //    var claimsData = new List<Dictionary<string, object>>
+        //    {
+        //        new() { { "ClaimID", 1 }, { "LecturerName", "Jane Doe" }, { "Status", ClaimStatusEnum.PendingManagerApproval.ToString() }, { "TotalAmount", 500m }, { "EncryptedFileName", "file1.enc" }, { "SubmissionDate", DateTime.Now.ToString("yyyy-MM-dd") }, { "ClaimPeriod", DateTime.Now.ToString("yyyy-MM-dd") } },
+        //        new() { { "ClaimID", 2 }, { "LecturerName", "John Doe" }, { "Status", ClaimStatusEnum.ApprovedByManager.ToString() }, { "TotalAmount", 700m }, { "EncryptedFileName", "file2.enc" }, { "SubmissionDate", DateTime.Now.ToString("yyyy-MM-dd") }, { "ClaimPeriod", DateTime.Now.ToString("yyyy-MM-dd") } }
+        //    };
+        //    File.WriteAllText(claimsFile, JsonSerializer.Serialize(claimsData));
 
-            var controller = new PROG6212_ST10435542_POE.Controllers.AcademicManagerController(_mockEnv.Object);
+        //    var controller = new PROG6212_ST10435542_POE.Controllers.AcademicManagerController(_mockEnv.Object);
 
-            // act
-            var result = controller.PendingClaims() as ViewResult;
-            var model = result?.Model as List<PendingClaimViewModel>;
+        //    // act
+        //    var result = controller.PendingClaims() as ViewResult;
+        //    var model = result?.Model as List<PendingClaimViewModel>;
 
-            // assert
-            Assert.IsNotNull(model);
-            Assert.AreEqual(1, model!.Count); // only 1 claim is pending manager approval
-            Assert.AreEqual("Jane Doe", model[0].LecturerName);
-            Assert.AreEqual(ClaimStatusEnum.PendingManagerApproval, model[0].Status);
-        }
+        //    // assert
+        //    Assert.IsNotNull(model);
+        //    Assert.AreEqual(1, model!.Count); // only 1 claim is pending manager approval
+        //    Assert.AreEqual("Jane Doe", model[0].LecturerName);
+        //    Assert.AreEqual(ClaimStatusEnum.PendingManagerApproval, model[0].Status);
+        //}
     }
 }

@@ -22,6 +22,7 @@ namespace PROG6212_ST10435542_POE.Models
 
         public string SupportingDocumentPath { get; set; }
         public string OriginalFileName { get; set; }
+        public long FileSize { get; set; }
 
         public bool CoordinatorApproved { get; set; }
         public string CoordinatorNotes { get; set; }

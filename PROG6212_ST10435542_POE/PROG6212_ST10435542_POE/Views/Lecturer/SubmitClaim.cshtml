@@ -42,32 +42,29 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="HourlyRate">Your Hourly Rate:</label>
-                <input asp-for="HourlyRate" type="number" step="0.01" placeholder="R 400.00" class="form-control" />
+                <label asp-for="HourlyRate">Hourly Rate: (ZAR)</label>
+                <input asp-for="HourlyRate" id="HourlyRate" class="form-control" readonly/>
+                <small class="text-muted">This rate is set by HR.</small>
                 <span asp-validation-for="HourlyRate" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="TotalHoursWorked">Total Hours Worked for Period:</label>
-                <input asp-for="TotalHoursWorked" type="number" step="0.5" placeholder="20.5" class="form-control" />
+                <input asp-for="TotalHoursWorked" id="TotalHoursWorked" type="number" step="0.5" placeholder="20.5" min="0" max="180" class="form-control" />
                 <span asp-validation-for="TotalHoursWorked" class="text-danger"></span>
             </div>
 
-            @* <div class="form-group">
-                <label>Estimated Total Amount:</label>
-                <input asp-for="TotalAmount" class="form-control" readonly />
-            </div> *@
+            <div class="form-group">
+                <label>Auto-Calculated Total Amount: (ZAR)</label>
+                <input id="CalculatedTotal" class="form-control" readonly value="0.00" />
+            </div>
 
             <div class="form-group">
                 <label asp-for="Notes">Additional Notes:</label>
                 <textarea asp-for="Notes" class="form-control" placeholder="Type here..." rows="4"></textarea>
                 <span asp-validation-for="Notes" class="text-danger"></span>
             </div>
-            <p></p>
-            <h3 class="mt-4">Detailed Work Entries (Optional)</h3>
-            <div>
-                <button type="button" class="btn btn-outline-primary">Add Work Entry</button>
-            </div>
+           
             <p></p>
 
             <h3 class="mt-4">Supporting Documents</h3>
@@ -81,3 +78,24 @@
         </form>
     </div>
 </div>
+
+@section Scripts 
+{
+    <partial name="_ValidationScriptsPartial" />
+    
+    <script> // auto calculation for the total amount
+        $(document).ready(function () {
+            function calculateTotal() {
+                var rate = parseFloat($("#HourlyRate").val()) || 0;
+                var hours = parseFloat($("#TotalHoursWorked").val()) || 0;
+                var total = rate * hours;
+                $("#CalculatedTotal").val(total.toFixed(2));
+            }
+
+            // this triggers the calculation when the hours change
+            $("#TotalHoursWorked").on("input change", calculateTotal);
+            
+            calculateTotal();
+        });
+    </script>
+}

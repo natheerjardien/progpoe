@@ -77,50 +77,22 @@ namespace PROG6212_ST10435542_POE.Services
 
             return await _context.MonthlyClaims
                 .Include(c => c.Lecturer)
-                .Where(c => c.Status == ClaimStatusEnum.ApprovedByCoordinator &&
+                .Where(c => c.Status == ClaimStatusEnum.ApprovedByManager &&
                             c.ClaimPeriod >= startDate && c.ClaimPeriod < endDate)
                 .OrderBy(c => c.Lecturer.LastName)
                 .ToListAsync();
         }
 
-        // --- Lecturer Claim Method Skeeltons (finisih later) ---
-
-        public Task<int> SubmitNewClaimAsync(MonthlyClaim claim)
+        // -- HR Password Reset Method ---
+        public async Task<bool> ResetUserPasswordAsync(string userId, string newPassword)
         {
-            return Task.FromResult(-1);
-        }
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null) return false;
 
-        public Task<bool> IsHoursValidForMonth(string lecturerId, DateTime month, decimal hoursWorked)
-        {
-            return Task.FromResult(true);
-        }
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var result = await _userManager.ResetPasswordAsync(user, token, newPassword);
 
-        public Task<List<MonthlyClaim>> GetLecturerClaimsAsync(string lecturerId)
-        {
-            return Task.FromResult(new List<MonthlyClaim>());
-        }
-
-        // --- Coordinator & Manager Approval Skeletons (finish later) ---
-
-        public Task<MonthlyClaim> GetClaimByIdAsync(int claimId)
-        {
-            return Task.FromResult<MonthlyClaim>(null);
-        }
-
-        public Task<List<MonthlyClaim>> GetPendingClaimsAsync(UserRoleEnum nextApproverRole)
-        {
-            // Implementation detail deferred, but stubbed for compilation
-            return Task.FromResult(new List<MonthlyClaim>());
-        }
-
-        public Task<bool> ApproveClaimAsync(int claimId, UserRoleEnum approverRole, string notes)
-        {
-            return Task.FromResult(false);
-        }
-
-        public Task<bool> RejectClaimAsync(int claimId, UserRoleEnum approverRole, string notes)
-        {
-            return Task.FromResult(false);
+            return result.Succeeded;
         }
     }
 }

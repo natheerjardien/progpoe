@@ -277,7 +277,7 @@ namespace PROG6212_ST10435542_POE.Migrations
                         {
                             Id = "hr-user-id-1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "17dff33f-07ef-4eac-9228-d6863fa774c0",
+                            ConcurrencyStamp = "f9bdd5fb-b8bd-43c3-ba11-30189fd8de0d",
                             Email = "natheer@example.com",
                             EmailConfirmed = true,
                             FirstName = "HR",
@@ -286,7 +286,7 @@ namespace PROG6212_ST10435542_POE.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "NATHEER@EXAMPLE.COM",
                             NormalizedUserName = "NATHEER@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKl5gdKLHQPrwWOR1/WE3VgFOgka45xzmrMm+O7fNBR9SC+xpsnZomLaDv/igccVJQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOKbWXIrCmLpdW7a3i9RJ3vwBh+axDlaU2geU0xMayVLoh9dgpA7hbTfBHaOdXBV7A==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -297,7 +297,7 @@ namespace PROG6212_ST10435542_POE.Migrations
                         {
                             Id = "lecturer-user-id-1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "13f195a3-e2c9-4a39-85be-b28175098391",
+                            ConcurrencyStamp = "50e61ff7-8c62-4896-8469-f093fe6f83cb",
                             Email = "nj@testing.com",
                             EmailConfirmed = true,
                             FirstName = "Natheer",
@@ -306,7 +306,7 @@ namespace PROG6212_ST10435542_POE.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "NJ@TESTING.COM",
                             NormalizedUserName = "NJ@TESTING.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKmnJbhAuhxweFuegKkK6kjeMwPytJM5sb4MyWD23r/qa6mhaDFqLcxxumthrAIF5A==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPOeQFjfl28novYTeNOaaHBSAUgN+CsXVGJXlrMjfXksw9lx9OI+oZtmQE71tvOU7Q==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -332,6 +332,9 @@ namespace PROG6212_ST10435542_POE.Migrations
                     b.Property<string>("CoordinatorNotes")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("FileSize")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("LecturerID")
                         .IsRequired()

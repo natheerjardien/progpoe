@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "V/0Tn41lcKY=",
+  "dgSpecHash": "mJo9cA4028k=",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\OneDrive - ADvTECH Ltd\\Desktop\\vcnmb-prog6212-2025-poe-natheerjardien\\PROG6212_ST10435542_POE\\Part 2 Tests\\Part 2 Tests.csproj",
   "expectedPackageFiles": [
@@ -154,6 +154,7 @@
     "C:\\Users\\user\\.nuget\\packages\\nuget.projectmodel\\6.11.0\\nuget.projectmodel.6.11.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\nuget.protocol\\6.11.0\\nuget.protocol.6.11.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\nuget.versioning\\6.11.0\\nuget.versioning.6.11.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\questpdf\\2025.7.4\\questpdf.2025.7.4.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.buffers\\4.6.0\\system.buffers.4.6.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.codedom\\5.0.0\\system.codedom.5.0.0.nupkg.sha512",

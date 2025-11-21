@@ -5,7 +5,7 @@ namespace PROG6212_ST10435542_POE.Models.ViewModels.HR
 {
     public class UserManagementViewModel
     {
-        public string UserID { get; set; }
+        public string? UserID { get; set; }
 
         [Required]
         public string FirstName { get; set; }
@@ -17,7 +17,7 @@ namespace PROG6212_ST10435542_POE.Models.ViewModels.HR
         public string Email { get; set; }
 
         [Display(Name = "Initial Password (Required for New Users")]
-        public string Password { get; set; }
+        public string? Password { get; set; }
 
         [Required]
         public decimal HourlyRate { get; set; }

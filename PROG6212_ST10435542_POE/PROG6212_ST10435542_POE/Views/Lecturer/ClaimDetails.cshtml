@@ -24,7 +24,7 @@
             <dd class="col-sm-8">@Model.ClaimPeriod.ToString("MMMM yyyy")</dd>
 
             <dt class="col-sm-4">Total Hours Worked:</dt>
-            <dd class="col-sm-8">@Model.TotalHoursWorked</dd>
+            <dd class="col-sm-8">@Model.TotalHoursWorked.ToString("0.0") hrs</dd>
 
             <dt class="col-sm-4">Total Amount Claimed:</dt>
             <dd class="col-sm-8">@($"R {Model.TotalAmount:N2}")</dd>
@@ -43,42 +43,6 @@
 
 <hr />
 
-<!-- Detailed Work Entries -->
-<div class="row mt-4">
-    <div class="col-md-8">
-        <h4>Detailed Work Entries:</h4>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Date Worked</th>
-                    <th>Hours</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (Model.ClaimDetails != null && Model.ClaimDetails.Count > 0)
-                {
-                    foreach (var entry in Model.ClaimDetails)
-                    {
-                        <tr>
-                            <td>@entry.DateWorked.ToString("dd/MM/yyyy")</td>
-                            <td>@entry.HoursWorked</td>
-                            <td>@entry.TaskDescription</td>
-                        </tr>
-                    }
-                }
-                else
-                {
-                    <tr>
-                        <td colspan="3" class="text-center"> No work entries added yet. </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-</div>
-<p></p>
-
 <!-- Supporting Documents -->
 <div class="row mt-4">
     <div class="col-md-8">
@@ -91,6 +55,10 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         @doc.FileName
                         <span class="badge bg-secondary">@doc.DisplaySize</span>
+                        @if (!string.IsNullOrEmpty(doc.FileUrl))
+                        {
+                            <a href="@doc.FileUrl" class="btn btn-sm btn-primary" target="_blank">Download</a>
+                        }
                     </li>
                 }
             </ul>
@@ -122,17 +90,17 @@
                     foreach (var approval in Model.ApprovalHistory)
                     {
                         <tr>
-                            <td>@approval.ApproverName</td>
                             <td>@approval.ApproverRole</td>
                             <td>
-                                <span class="badge @(approval.ApprovalStatus == ClaimApprovalStatusEnum.Approved ? "bg-success" :
-                                                                                            approval.ApprovalStatus == ClaimApprovalStatusEnum.Rejected ? "bg-danger" :
-                                                                                            approval.ApprovalStatus == ClaimApprovalStatusEnum.Pending ? "bg-warning" : "bg-info")">
-                                @approval.ApprovalStatus
-                        </span>
+                                <span class="badge @GetApprovalBadgeClass(approval.ApprovalStatus)">
+                                    @approval.ApprovalStatus
+                                </span>
+                                @if (!string.IsNullOrEmpty(approval.Comments))
+                                {
+                                    <div class="small text-muted mt-1"><em>"@approval.Comments"</em></div>
+                                }
                             </td>
-                            <td>@approval.ApprovalDate.ToString("dd/MM/yyyy")</td>
-                            <td>@approval.Comments</td>
+                            <td>@approval.ApprovalDate.ToString("dd/MM/yy")</td>
                         </tr>
                     }
                 }
@@ -145,8 +113,28 @@
             </tbody>
         </table>
         <p></p>
-        <a asp-controller="Lecturer" asp-action="ClaimStatusTracker" class="btn btn-outline-primary">Back to My Claims</a>
+        @* <a asp-controller="Lecturer" asp-action="ClaimStatusTracker" class="btn btn-outline-primary">Back to My Claims</a> *@
     </div>
 </div>
 
-        
+@functions {
+    string GetStatusBadgeClass(ClaimStatusEnum status)
+    {
+        return status switch
+        {
+            ClaimStatusEnum.ApprovedByCoordinator => "bg-success",
+            ClaimStatusEnum.Rejected => "bg-danger",
+            _ => "bg-warning text-dark"
+        };
+    }
+
+    string GetApprovalBadgeClass(ClaimApprovalStatusEnum status)
+    {
+        return status switch
+        {
+            ClaimApprovalStatusEnum.Approved => "bg-success",
+            ClaimApprovalStatusEnum.Rejected => "bg-danger",
+            _ => "bg-secondary"
+        };
+    }
+}

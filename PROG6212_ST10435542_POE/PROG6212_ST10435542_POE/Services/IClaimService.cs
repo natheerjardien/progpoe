@@ -14,13 +14,6 @@ namespace PROG6212_ST10435542_POE.Services
 
         Task<List<MonthlyClaim>> GenerateInvoiceReportDataAsync(DateTime month);
 
-        Task<int> SubmitNewClaimAsync(MonthlyClaim claim);
-        Task<bool> IsHoursValidForMonth(string lecturerId, DateTime month, decimal hoursWorked);
-        Task<List<MonthlyClaim>> GetLecturerClaimsAsync(string lecturerId);
-
-        Task<MonthlyClaim> GetClaimByIdAsync(int claimId);
-        Task<List<MonthlyClaim>> GetPendingClaimsAsync(UserRoleEnum nextApproverRole);
-        Task<bool> ApproveClaimAsync(int claimId, UserRoleEnum approverRole, string notes);
-        Task<bool> RejectClaimAsync(int claimId, UserRoleEnum approverRole, string notes);
+        Task<bool> ResetUserPasswordAsync(string userId, string newPassword);
     }
 }
