@@ -6,6 +6,8 @@ using PROG6212_ST10435542_POE.Models.Enums;
 
 namespace PROG6212_ST10435542_POE.Models.Data
 {
+// According to Microsoft Learn (n.d.), the ApplicationDbContext class is responsible for managing the database context and configuring the identity model for user authentication and authorization
+// I integrated EF Core Identity by inheriting from IdentityDbContext and configuring the identity model in the OnModelCreating method
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -13,9 +15,10 @@ namespace PROG6212_ST10435542_POE.Models.Data
         {
         }
 
-        public DbSet<MonthlyClaim> MonthlyClaims { get; set; }
+        public DbSet<MonthlyClaim> MonthlyClaims { get; set; } // DbSet for MonthlyClaim entities
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        // implemented this override method to configure the model and seed data
+        protected override void OnModelCreating(ModelBuilder builder) // override OnModelCreating to configure the model
         {
             base.OnModelCreating(builder);
 
@@ -34,7 +37,7 @@ namespace PROG6212_ST10435542_POE.Models.Data
             builder.Entity<IdentityRole>().HasData(roles);
 
             var hasher = new PasswordHasher<ApplicationUser>();
-            var hrUser = new ApplicationUser
+            var hrUser = new ApplicationUser // seed HR user
             {
                 Id = "hr-user-id-1",
                 UserName = "natheer@example.com",
@@ -58,7 +61,7 @@ namespace PROG6212_ST10435542_POE.Models.Data
                 UserId = hrUser.Id
             });
 
-            var lecturerUser = new ApplicationUser
+            var lecturerUser = new ApplicationUser // seed Lecturer user
             {
                 Id = "lecturer-user-id-1",
                 UserName = "nj@testing.com",
@@ -83,3 +86,11 @@ namespace PROG6212_ST10435542_POE.Models.Data
         }
     }
 }
+
+/* References:
+
+Microsoft Learn, (n.d.). ASP.NET Core MVC with Entity Framework Core - Tutorial. [online] 
+Available at: <https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-8.0>
+[Accessed 14 November 2025].
+
+*/

@@ -42,7 +42,7 @@ namespace PROG6212_ST10435542_POE.Controllers
         [HttpGet]
         public async Task<IActionResult> SubmitClaim()
         {
-            var user = await _userManager.GetUserAsync(User);
+            var user = await _userManager.GetUserAsync(User); // gets the currently logged-in user
 
             if (user == null)
             {
@@ -62,7 +62,7 @@ namespace PROG6212_ST10435542_POE.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SubmitClaim (SubmitClaimViewModel model, CancellationToken ct) // handles the form submission for new claims
         {
-            var user = await _userManager.GetUserAsync(User);
+            var user = await _userManager.GetUserAsync(User); // gets the currently logged-in user
 
             if (user == null)
             {
@@ -71,7 +71,7 @@ namespace PROG6212_ST10435542_POE.Controllers
 
             model.HourlyRate = user.HourlyRate;
 
-            if (model.TotalHoursWorked > 180)
+            if (model.TotalHoursWorked > 180) // checks if the claimed hours exceed the monthly limit
             {
                 ModelState.AddModelError("TotalHoursWorked", "You cannot claim for more than 180 hours in a single month.");
             }
@@ -89,7 +89,7 @@ namespace PROG6212_ST10435542_POE.Controllers
 
             if (model.SupportingDocument != null)
             {
-                var allowedExtensions = new[] { ".pdf", ".docx", ".xlsx" };
+                var allowedExtensions = new[] { ".pdf", ".docx", ".xlsx" }; // uploaded documents are only supported in these formats
                 var ext = Path.GetExtension(model.SupportingDocument.FileName).ToLowerInvariant();
 
                 if (!allowedExtensions.Contains(ext))
@@ -98,7 +98,7 @@ namespace PROG6212_ST10435542_POE.Controllers
                     return View(model);
                 }
 
-                if (model.SupportingDocument.Length > 5 * 1024 * 1024)
+                if (model.SupportingDocument.Length > 5 * 1024 * 1024) // checks if the file size limit is less than 5MB
                 {
                     ModelState.AddModelError("SupportingDocument", "File too large. Max size 5 MB.");
                     return View(model);
@@ -136,8 +136,8 @@ namespace PROG6212_ST10435542_POE.Controllers
                 ManagerNotes = ""
             };
 
-            _context.MonthlyClaims.Add(newClaim);
-            await _context.SaveChangesAsync();
+            _context.MonthlyClaims.Add(newClaim); // adds the new claim to the database context
+            await _context.SaveChangesAsync(); // saves changes to the database
 
             TempData["SuccessMessage"] = "Claim submitted successfully!";
             return RedirectToAction("ClaimStatusTracker");
@@ -154,7 +154,7 @@ namespace PROG6212_ST10435542_POE.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            var claim = await _context.MonthlyClaims
+            var claim = await _context.MonthlyClaims // fetches the claim from the database
                 .Include(c => c.Lecturer)
                 .FirstOrDefaultAsync(c => c.ClaimID == id && c.LecturerID == user.Id);
 
@@ -163,7 +163,7 @@ namespace PROG6212_ST10435542_POE.Controllers
                 return NotFound();
             }
 
-            var model = new ClaimDetailsViewModel
+            var model = new ClaimDetailsViewModel // maps claim data to the view model
             {
                 ClaimID = claim.ClaimID,
                 LecturerName = $"{claim.Lecturer.FirstName} {claim.Lecturer.LastName}",
@@ -175,7 +175,7 @@ namespace PROG6212_ST10435542_POE.Controllers
                 Documents = new List<SupportingDocumentViewModel>()
             };
 
-            if (!string.IsNullOrEmpty(claim.SupportingDocumentPath))
+            if (!string.IsNullOrEmpty(claim.SupportingDocumentPath)) // adds supporting document info if available
             {
                 model.Documents.Add(new SupportingDocumentViewModel
                 {
@@ -187,7 +187,7 @@ namespace PROG6212_ST10435542_POE.Controllers
 
             model.ApprovalHistory = new List<ClaimApprovalItemViewModel> // hard coded for now. Will chnage it later
             {
-                new ClaimApprovalItemViewModel
+                new ClaimApprovalItemViewModel // coordinator approval info
                 {
                     ApproverName = "Coordinator",
                     ApproverRole = ApproverRoleEnum.ProgrammeCoordinator,
@@ -195,7 +195,7 @@ namespace PROG6212_ST10435542_POE.Controllers
                     ApprovalDate = DateTime.Now,
                     Comments = claim.CoordinatorNotes ?? "Pending Review"
                 },
-                new ClaimApprovalItemViewModel
+                new ClaimApprovalItemViewModel // manager approval info
                 {
                     ApproverName = "Manager",
                     ApproverRole = ApproverRoleEnum.AcademicManager,
@@ -212,12 +212,13 @@ namespace PROG6212_ST10435542_POE.Controllers
         public async Task<IActionResult> ClaimStatusTracker() // reads from DB
         {
             var user = await _userManager.GetUserAsync(User);
+
             if (user == null)
             {
                 return RedirectToAction("Login", "Account");
             }
 
-            var claims = await _context.MonthlyClaims
+            var claims = await _context.MonthlyClaims // fetches all claims for the logged-in lecturer
                 .Where(c => c.LecturerID == user.Id)
                 .OrderByDescending(c => c.SubmissionDate)
                 .Select(c => new ClaimStatusViewModel
@@ -244,7 +245,7 @@ namespace PROG6212_ST10435542_POE.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            var model = new LecturerProfileViewModel
+            var model = new LecturerProfileViewModel // maps user data to the view model
             {
                 FirstName = user.FirstName,
                 LastName = user.LastName,

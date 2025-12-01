@@ -14,11 +14,13 @@ namespace PROG6212_ST10435542_POE
         {
             var builder = WebApplication.CreateBuilder(args);
 
+// According to Microsoft Learn (n.d.), the following code configures services for the ASP.NET Core application, including database context, identity, authorization policies, and session settings
+// I configured the connection string for the database context using SQL Server and set up identity with custom password requirements
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => // configuring password requirements
             {
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;
@@ -30,7 +32,7 @@ namespace PROG6212_ST10435542_POE
             .AddDefaultTokenProviders();
 
 
-            builder.Services.AddAuthorization(options =>
+            builder.Services.AddAuthorization(options => // defining role-based authorization policies
             {
                 options.AddPolicy(UserRoleEnum.HR.ToString(), policy => policy.RequireRole(UserRoleEnum.HR.ToString()));
                 options.AddPolicy(UserRoleEnum.Lecturer.ToString(), policy => policy.RequireRole(UserRoleEnum.Lecturer.ToString()));
@@ -38,7 +40,9 @@ namespace PROG6212_ST10435542_POE
                 options.AddPolicy(UserRoleEnum.AcademicManager.ToString(), policy => policy.RequireRole(UserRoleEnum.AcademicManager.ToString()));
             });
 
-            builder.Services.AddSession(options =>
+// According to Microsoft Learn (n.d.), session management is configured to maintain user state across requests
+// I added this builder service to enable session management in the application and accessed the ssession in various controllers to store user-specific data
+            builder.Services.AddSession(options => // configuring session settings
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
                 options.Cookie.HttpOnly = true;
@@ -48,18 +52,16 @@ namespace PROG6212_ST10435542_POE
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            builder.Services.AddScoped<IClaimService, ClaimService>();
-            builder.Services.AddScoped<IFileStorageService, FileStorageService>();
+            builder.Services.AddScoped<IClaimService, ClaimService>(); // registering application services for dependency injection
+            builder.Services.AddScoped<IFileStorageService, FileStorageService>(); // service for handling file storage operations
 
             QuestPDF.Settings.License = LicenseType.Community; // to print the invoice report as a pdf
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -72,7 +74,7 @@ namespace PROG6212_ST10435542_POE
             app.UseAuthorization();
             app.UseSession();
 
-            app.Use(async (context, next) =>
+            app.Use(async (context, next) => // middleware to handle 401 and 403 status codes
             {
                 await next();
                 if (context.Response.StatusCode == 401 && !context.Response.HasStarted)
@@ -93,3 +95,15 @@ namespace PROG6212_ST10435542_POE
         }
     }
 }
+
+/* References:
+
+Microsoft Learn, (n.d.). ASP.NET Core MVC with Entity Framework Core - Tutorial. [online] 
+Available at: <https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-8.0>
+[Accessed 14 September 2025].
+
+Microsoft Learn, (n.d.). Session and state management in ASP.NET Core. [online] 
+Available at: <https://learn.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-10.0>
+[Accessed 16 November 2025].
+
+*/

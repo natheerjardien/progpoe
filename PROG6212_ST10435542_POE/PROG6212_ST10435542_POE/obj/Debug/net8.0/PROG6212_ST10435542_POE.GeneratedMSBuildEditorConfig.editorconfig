@@ -52,26 +52,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Admin/AddLecturerFinancials.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTGVjdHVyZXJGaW5hbmNpYWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Admin/DisplayReports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzcGxheVJlcG9ydHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Admin/EditLecturerFinancials.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdExlY3R1cmVyRmluYW5jaWFscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Admin/GenerateInvoiceReport.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2VuZXJhdGVJbnZvaWNlUmVwb3J0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Admin/ManageUsers.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlVXNlcnMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -110,10 +90,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/Lecturer/SubmitClaim.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcU3VibWl0Q2xhaW0uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/ProgrammeCoordinator/ApprovalWorkflowSettings.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbW1lQ29vcmRpbmF0b3JcQXBwcm92YWxXb3JrZmxvd1NldHRpbmdzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/OneDrive - ADvTECH Ltd/Desktop/vcnmb-prog6212-2025-poe-natheerjardien/PROG6212_ST10435542_POE/PROG6212_ST10435542_POE/Views/ProgrammeCoordinator/PendingClaims.cshtml]

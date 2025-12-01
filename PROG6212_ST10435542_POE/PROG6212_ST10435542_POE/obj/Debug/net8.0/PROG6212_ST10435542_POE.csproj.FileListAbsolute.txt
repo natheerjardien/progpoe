@@ -1,6 +1,5 @@
 C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\PROG6212_ST10435542_POE\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\PROG6212_ST10435542_POE\bin\Debug\net8.0\appsettings.json
-C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\PROG6212_ST10435542_POE\bin\Debug\net8.0\uploads\claims.json
 C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\PROG6212_ST10435542_POE\bin\Debug\net8.0\PROG6212_ST10435542_POE.staticwebassets.runtime.json
 C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\PROG6212_ST10435542_POE\bin\Debug\net8.0\PROG6212_ST10435542_POE.staticwebassets.endpoints.json
 C:\Users\user\OneDrive - ADvTECH Ltd\Desktop\vcnmb-prog6212-2025-poe-natheerjardien\PROG6212_ST10435542_POE\PROG6212_ST10435542_POE\bin\Debug\net8.0\PROG6212_ST10435542_POE.exe

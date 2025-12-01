@@ -6,6 +6,8 @@ using PROG6212_ST10435542_POE.Models.Enums;
 
 namespace PROG6212_ST10435542_POE.Services
 {
+// This claim service handles HR user management, reporting, and password reset functionalities
+// I implemented this service to encapsulate the business logic related to HR operations, such as creating and updating users, generating reports, and resetting passwords
     public class ClaimService : IClaimService
     {
         private readonly ApplicationDbContext _context;

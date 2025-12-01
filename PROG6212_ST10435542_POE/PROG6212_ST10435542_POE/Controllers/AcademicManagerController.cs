@@ -23,9 +23,9 @@ namespace PROG6212_ST10435542_POE.Controllers
         // shows all pending claims for review
         public async Task<IActionResult> PendingClaims()
         {
-            ViewBag.StatusMessage = HttpContext.Session.GetString("ManagerStatus");
+            ViewBag.StatusMessage = HttpContext.Session.GetString("ManagerStatus"); // retrieves status message from session
 
-            var pendingClaims = await _context.MonthlyClaims
+            var pendingClaims = await _context.MonthlyClaims // fetches pending claims from database
                 .Include(c => c.Lecturer)
                 .Where(c => c.Status == ClaimStatusEnum.PendingManagerApproval)
                 .Select(c => new PendingClaimViewModel
@@ -48,10 +48,14 @@ namespace PROG6212_ST10435542_POE.Controllers
         {
             try
             {
-                var claim = await _context.MonthlyClaims.FindAsync(id);
-                if (claim == null) return Json(new { success = false, message = "Claim not found." });
+                var claim = await _context.MonthlyClaims.FindAsync(id); // finds claim by ID
+                
+                if (claim == null)
+                {
+                    return Json(new { success = false, message = "Claim not found." });
+                }
 
-                claim.Status = ClaimStatusEnum.ApprovedByManager;
+                claim.Status = ClaimStatusEnum.ApprovedByManager; // updates claim status to approved
                 claim.ManagerApproved = true;
                 claim.ManagerNotes = "Final Approval by Academic Manager";
 
@@ -72,10 +76,14 @@ namespace PROG6212_ST10435542_POE.Controllers
         {
             try
             {
-                var claim = await _context.MonthlyClaims.FindAsync(id);
-                if (claim == null) return Json(new { success = false, message = "Claim not found." });
+                var claim = await _context.MonthlyClaims.FindAsync(id); // finds claim by ID
 
-                claim.Status = ClaimStatusEnum.Rejected;
+                if (claim == null)
+                {
+                    return Json(new { success = false, message = "Claim not found." });
+                }
+
+                claim.Status = ClaimStatusEnum.Rejected; // updates claim status to rejected
                 claim.ManagerApproved = false;
                 claim.ManagerNotes = "Rejected by Academic Manager";
 
@@ -94,7 +102,7 @@ namespace PROG6212_ST10435542_POE.Controllers
         // shows all processed claims
         public async Task<IActionResult> ProcessedClaims()
         {
-            var processedClaims = await _context.MonthlyClaims
+            var processedClaims = await _context.MonthlyClaims // retrieves processed claims from database
                 .Include(c => c.Lecturer)
                 .Where(c => c.Status == ClaimStatusEnum.ApprovedByManager || c.Status == ClaimStatusEnum.Rejected)
                 .OrderByDescending(c => c.SubmissionDate)
@@ -117,7 +125,7 @@ namespace PROG6212_ST10435542_POE.Controllers
         [HttpGet]
         public async Task<IActionResult> ReviewClaim(int id)
         {
-            var claim = await _context.MonthlyClaims
+            var claim = await _context.MonthlyClaims // fetches claim by ID
                 .Include(c => c.Lecturer)
                 .FirstOrDefaultAsync(c => c.ClaimID == id);
 
@@ -139,7 +147,7 @@ namespace PROG6212_ST10435542_POE.Controllers
                 Documents = new List<SupportingDocumentViewModel>()
             };
 
-            if (!string.IsNullOrEmpty(claim.SupportingDocumentPath))
+            if (!string.IsNullOrEmpty(claim.SupportingDocumentPath)) // adds supporting document to the model if it exists
             {
                 model.Documents.Add(new SupportingDocumentViewModel
                 {

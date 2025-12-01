@@ -13,7 +13,7 @@ namespace PROG6212_ST10435542_POE.Controllers
     public class ProgrammeCoordinatorController : Controller
     {
         private readonly IWebHostEnvironment _env; // allows access to uploads folder
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context; // database context
 
         // According to FullstackPrep (2025), the constructor initializes the controller with the web host environment to access file paths.
         public ProgrammeCoordinatorController(IWebHostEnvironment env, ApplicationDbContext context)
@@ -24,9 +24,9 @@ namespace PROG6212_ST10435542_POE.Controllers
 
         public async Task<IActionResult> PendingClaims()
         {
-            ViewBag.LastActionMessage = HttpContext.Session.GetString("LastAction");
+            ViewBag.LastActionMessage = HttpContext.Session.GetString("LastAction"); // retrieves last action message from session
 
-            var pendingClaims = await _context.MonthlyClaims
+            var pendingClaims = await _context.MonthlyClaims // retrieves pending claims from database
                 .Include(c => c.Lecturer)
                 .Where(c => c.Status == ClaimStatusEnum.PendingCoordinatorApproval)
                 .Select(c => new PendingClaimViewModel
@@ -49,20 +49,20 @@ namespace PROG6212_ST10435542_POE.Controllers
         {
             try
             {
-                var claim = await _context.MonthlyClaims.FindAsync(id);
+                var claim = await _context.MonthlyClaims.FindAsync(id); // finds claim by ID
 
                 if (claim == null)
                 {
                     return Json(new { success = false, message = "Claim not found." });
                 }
 
-                claim.Status = ClaimStatusEnum.PendingManagerApproval;
-                claim.CoordinatorApproved = true;
-                claim.CoordinatorNotes = "Verified by Coordinator";
+                claim.Status = ClaimStatusEnum.PendingManagerApproval; // updates claim status
+                claim.CoordinatorApproved = true; // marks as approved by coordinator
+                claim.CoordinatorNotes = "Verified by Coordinator"; // adds coordinator notes
 
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(); // saves changes to database
 
-                HttpContext.Session.SetString("LastAction", $"Verified Claim #{id} for {claim.TotalAmount:C} at {DateTime.Now.ToShortTimeString()}");
+                HttpContext.Session.SetString("LastAction", $"Verified Claim #{id} for {claim.TotalAmount:C} at {DateTime.Now.ToShortTimeString()}"); // sets last action message in session
 
                 return Json(new { success = true, message = $"Claim #{id} verified and forwarded to Manager." }); // returns success response
             }
@@ -77,20 +77,20 @@ namespace PROG6212_ST10435542_POE.Controllers
         {
             try
             {
-                var claim = await _context.MonthlyClaims.FindAsync(id);
+                var claim = await _context.MonthlyClaims.FindAsync(id); // finds claim by ID
 
                 if (claim == null)
                 {
                     return Json(new { success = false, message = "Claim not found." });
                 }
 
-                claim.Status = ClaimStatusEnum.Rejected;
-                claim.CoordinatorApproved = false;
-                claim.CoordinatorNotes = "Rejected by Coordinator";
+                claim.Status = ClaimStatusEnum.Rejected; // updates claim status to rejected
+                claim.CoordinatorApproved = false; // marks as not approved by coordinator
+                claim.CoordinatorNotes = "Rejected by Coordinator"; // adds coordinator notes
 
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(); // saves changes to database
 
-                HttpContext.Session.SetString("LastAction", $"Rejected Claim #{id} at {DateTime.Now.ToShortTimeString()}");
+                HttpContext.Session.SetString("LastAction", $"Rejected Claim #{id} at {DateTime.Now.ToShortTimeString()}"); // sets last action message in session
 
                 return Json(new { success = true, message = $"Claim #{id} rejected." }); // returna success response
             }
@@ -102,7 +102,7 @@ namespace PROG6212_ST10435542_POE.Controllers
 
         public async Task<IActionResult> ProcessedClaims()
         {
-            var processedClaims = await _context.MonthlyClaims
+            var processedClaims = await _context.MonthlyClaims // retrieves processed claims from database
                 .Include(c => c.Lecturer)
                 .Where(c => c.Status != ClaimStatusEnum.PendingCoordinatorApproval && c.Status != ClaimStatusEnum.Submitted)
                 .OrderByDescending(c => c.SubmissionDate)
@@ -124,7 +124,7 @@ namespace PROG6212_ST10435542_POE.Controllers
         [HttpGet]
         public async Task<IActionResult> ReviewClaim(int id)
         {
-            var claim = await _context.MonthlyClaims
+            var claim = await _context.MonthlyClaims // retrieves claim details by ID
                 .Include(c => c.Lecturer)
                 .FirstOrDefaultAsync(c => c.ClaimID == id);
 
@@ -133,7 +133,7 @@ namespace PROG6212_ST10435542_POE.Controllers
                 return NotFound("Claim not found.");
             }
 
-            var model = new ClaimDetailsViewModel
+            var model = new ClaimDetailsViewModel // maps claim details to view model
             {
                 ClaimID = claim.ClaimID,
                 LecturerName = $"{claim.Lecturer.FirstName} {claim.Lecturer.LastName}",
@@ -145,7 +145,7 @@ namespace PROG6212_ST10435542_POE.Controllers
                 Documents = new List<SupportingDocumentViewModel>()
             };
 
-            if (!string.IsNullOrEmpty(claim.SupportingDocumentPath))
+            if (!string.IsNullOrEmpty(claim.SupportingDocumentPath)) // adds supporting document to view model if exists
             {
                 model.Documents.Add(new SupportingDocumentViewModel
                 {

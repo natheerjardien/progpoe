@@ -9,8 +9,8 @@ namespace PROG6212_ST10435542_POE.Controllers
 // Ive made the controllers to use the ViewModels, but no logic added to it. Just to make the View visisble in the browser. Used the same concepts adopted from CLDV6212 POE
     public class AccountController : Controller
     {
-        private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager; // manages user sign-in operations
+        private readonly UserManager<ApplicationUser> _userManager; // manages user-related operations
         private readonly ILogger<AccountController> _logger;
 
         public AccountController(SignInManager<ApplicationUser> signInManager,
@@ -22,6 +22,8 @@ namespace PROG6212_ST10435542_POE.Controllers
             _logger = logger;
         }
 
+// According to Micrsoft (n.d.), the Login action methods handle user login requests, validate credentials, and manage redirection based on user roles
+// I utilized the built in identity system to handle user authenication by registering Identity services in Program.cs and connected it with my ApplicationDbContext.
         [HttpGet]
         public IActionResult Login(string returnUrl = null)
         {
@@ -37,7 +39,7 @@ namespace PROG6212_ST10435542_POE.Controllers
 
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false); // attempts to sign in the user
 
                 if (result.Succeeded)
                 {
@@ -111,5 +113,9 @@ namespace PROG6212_ST10435542_POE.Controllers
 IIEVC School of Computer Science, 2025. CLDV6212 Building a Modern Web App with Azure Table Storage & ASP.NET Core MVC - Part 1. [video online] 
 Available at: <https://youtu.be/Txp7VYUMBGQ?si=5sD7TV0vS90-pPHY>
 [Accessed 14 September 2025].
+
+Microsoft Learn, (n.d.). Introduction to Identity on ASP.NET Core. [online] 
+Available at: <https://jakeydocs.readthedocs.io/en/latest/security/authentication/identity.html>
+[Accessed 15 November 2025].
 
 */
