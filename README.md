@@ -1,4 +1,7 @@
-# Contract Monthly Claim System 🗂️ -- (Part 2 additions at the bottom 👇)
+# Contract Monthly Claim System 🗂️
+
+<details>
+<summary><strong>PROG6212 POE Part 1 (Click to Expand)</strong></summary>
 
 ## Report 📝
 ## 1.1	Introduction
@@ -167,8 +170,10 @@ Available at: <https://bootswatch.com/lux/>
 [Accessed 16 September 2025].
 
 PROG6212 POE Part 1 = Complete ✅
+</details>
 
-------------------------------------------------------------------------
+<details>
+<summary><strong>PROG6212 POE Part 2 (Click to Expand)</strong></summary>
 
 PROG6212 POE Part 2 👇
 
@@ -187,3 +192,117 @@ https://youtu.be/nG8nMb_Sddc
 ## MSTests - All 5 test passed
 <img width="1727" height="1013" alt="Screenshot 2025-10-22 193842" src="https://github.com/user-attachments/assets/129ed669-f1b8-47d8-89f5-11ad799640f0" />
 
+</details>
+
+<details>
+<summary><strong>PROG6212 POE Part 3 (Click to Expand)</strong></summary>
+
+# PROG6212 POE Part 3 👇
+
+## PowerPoint
+[PROG6212 POE PART 3 - Presentation.pptx](https://github.com/user-attachments/files/23680777/PROG6212.POE.PART.3.-.Presentation.pptx)
+
+## YouTube Video Link (Unlisted):
+https://youtu.be/tn8SNMWsO_g
+
+## Lecturer Feedback & Improvements
+<img width="928" height="421" alt="Screenshot 2025-11-21 185251" src="https://github.com/user-attachments/assets/cbdddc5f-6038-4685-8be7-7ea9960e2a07" />
+
+Based on the feedback and Part 3 requirements, the following critical updates were implemented:
+1.  **Automation:** Lecturers no longer manually input their hourly rate. It is now automatically pulled from the HR-managed database profile to prevent errors or fraud.
+2.  **Validation:** Added logic to reject claims where hours worked exceed **180 hours** per month.
+3.  **Data Persistence:** Replaced the temporary file-based storage with a robust **SQL Server Database** using **Entity Framework Core**.
+4.  **Role Security:** Implemented `ASP.NET Core Identity` to ensure users (Lecturer, HR, Coordinator, Manager) can only access pages relevant to their specific roles.
+
+## New Features Implemented (Part 3)
+### 1. Database Integration (Entity Framework Core)
+-   Migrated from `claims.json` to a full SQL Server Relational Database.
+-   Implemented `ApplicationDbContext` inheriting from `IdentityDbContext` to manage Users, Roles, and MonthlyClaims in a single normalized database structure.
+-   Used **Code-First Migrations** to generate database schemas.
+
+### 2. Secure Authentication & Authorization
+-   Integrated **ASP.NET Core Identity** for secure user login and logout.
+-   Created a role-based system:
+    -   **HR:** Manage users, update profiles/passwords, generate reports.
+    -   **Lecturer:** Submit claims, view history, track status.
+    -   **Programme Coordinator:** Verify claims.
+    -   **Academic Manager:** Final approval/rejection.
+
+### 3. HR Reporting Module (PDF Generation)
+-   Implemented a reporting feature that generates professional invoices/reports for approved claims.
+-   Integrated the **QuestPDF** library to dynamically create downloadable PDF documents with tables, headers, and calculated totals (formatted in ZAR currency).
+
+### 4. Session Management
+-   Used `HttpContext.Session` to store and display temporary user feedback messages (e.g., "Claim successfully verified") across page redirects, enhancing the user experience as per the requirements.
+
+### 5. Enhanced File Handling
+-   Supporting documents are now encrypted (AES-256) before storage.
+-   Added file size tracking to the database to display accurate file sizes (KB/MB) in the UI.
+
+## Technologies Used (Part 3 Updates) ⚙️
+-   **ASP.NET Core Identity:** For authentication and role management.
+-   **Entity Framework Core (SQL Server):** For persistent data storage.
+-   **QuestPDF:** For generating PDF reports.
+-   **System.Security.Cryptography:** For AES encryption of uploaded files.
+
+## Web App Screenshots
+### Home Page
+<img width="1919" height="992" alt="Screenshot 2025-11-21 180621" src="https://github.com/user-attachments/assets/a500b11f-18cc-493e-8597-f8cbe42a83a7" />
+
+### Account - Login
+<img width="1919" height="989" alt="Screenshot 2025-11-21 180630" src="https://github.com/user-attachments/assets/a88e14a7-b31a-49d9-afbb-0455adea2ead" />
+
+### HR Logged in - Manage Users View
+<img width="1919" height="990" alt="Screenshot 2025-11-21 180647" src="https://github.com/user-attachments/assets/7736ea54-366b-4615-b7ed-ef22d8530802" />
+
+### HR - Edit User
+<img width="1919" height="989" alt="Screenshot 2025-11-21 180726" src="https://github.com/user-attachments/assets/a9d32c05-d37d-4a4a-9a0b-bab6f7f5d213" />
+
+### HR - Add New User
+<img width="1919" height="989" alt="Screenshot 2025-11-21 180657" src="https://github.com/user-attachments/assets/7f9a6fca-cdd4-4817-8c45-198d4d17f6c6" />
+
+### HR - Generate Report
+<img width="1919" height="991" alt="Screenshot 2025-11-21 180712" src="https://github.com/user-attachments/assets/aa4b5dae-4069-43e3-9fda-01f3d6913ed5" />
+
+### Lecturer Logged in - Submit Claim View
+<img width="1919" height="990" alt="Screenshot 2025-11-21 180750" src="https://github.com/user-attachments/assets/cc028d75-94fe-4bc1-b72e-b3b8035ab6a6" />
+
+### Lecturer - Track Claims View
+<img width="1919" height="989" alt="Screenshot 2025-11-21 180759" src="https://github.com/user-attachments/assets/7ae39945-ddd3-4a76-b851-8c2de4c0b9ed" />
+
+### Lecturer - Claim Details View
+<img width="1919" height="991" alt="Screenshot 2025-11-21 180809" src="https://github.com/user-attachments/assets/f9256741-08cc-4b5d-b8b1-7dcf3282fe51" />
+
+### Lecturer - My Profile View
+<img width="1919" height="992" alt="Screenshot 2025-11-21 180820" src="https://github.com/user-attachments/assets/828be09b-e204-47e1-a631-b1d97581d5c1" />
+
+### Admin (Programme Coordintor/ Academic Manager - Identical Views - Seperate Logins) - Pending Claims View
+<img width="1919" height="993" alt="Screenshot 2025-11-21 180848" src="https://github.com/user-attachments/assets/9e11e6d4-d530-4d1c-a856-f4d5988b9618" />
+
+### Programme Coordinator - Claim History
+<img width="1919" height="985" alt="Screenshot 2025-11-21 180856" src="https://github.com/user-attachments/assets/41ff5a60-5c4f-4a55-9eb8-99ede80cd944" />
+
+### Programme Coordinator - Claim Details View (With approval history)
+<img width="1919" height="992" alt="Screenshot 2025-11-21 180904" src="https://github.com/user-attachments/assets/4a7f39a5-5811-40f9-9e78-90099475c956" />
+
+### Academic Manager - Pending Claims
+<img width="1919" height="992" alt="Screenshot 2025-11-21 181000" src="https://github.com/user-attachments/assets/fed8cabd-29c1-4919-87f2-9b756408ca38" />
+
+### Academic Manager - Claim History
+<img width="1917" height="987" alt="Screenshot 2025-11-21 181008" src="https://github.com/user-attachments/assets/c3a47f96-0ebc-440d-92e3-c42b3a3aeca1" />
+
+### Academic Manager - Claim Details (With approval history)
+<img width="1919" height="990" alt="Screenshot 2025-11-21 181016" src="https://github.com/user-attachments/assets/a6de9d21-edad-449e-8697-bb006988841c" />
+
+## Updated Reference List 📜
+Microsoft, 2025. *Introduction to Identity on ASP.NET Core*. [online] Available at: <https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity> [Accessed 20 November 2025].
+
+Microsoft, 2025. *ASP.NET Core MVC with Entity Framework Core - Tutorial*. [online] Available at: <https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro> [Accessed 20 November 2025].
+
+QuestPDF, 2025. *QuestPDF - Getting Started*. [online] Available at: <https://www.questpdf.com/getting-started.html> [Accessed 21 November 2025].
+
+Microsoft, 2025. *Session and state management in ASP.NET Core*. [online] Available at: <https://learn.microsoft.com/en-us/aspnet/core/fundamentals/app-state> [Accessed 21 November 2025].
+
+PROG6212 POE Part 3 = Complete ✅
+
+</details>
